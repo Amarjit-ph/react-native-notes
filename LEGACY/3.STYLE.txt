@@ -1,0 +1,32 @@
+FLEX-BOX
+
+
+[justifyContent:]
+
+1.'space-between'
+2.'space-around'
+3.'flex-start'
+4.'center'
+5.'flex-end'
+
+HORIZONTAL ALIGNMENT:
+
+[alignItems:]
+
+.'flex-end'
+.'flex-start'
+.'center'
+
+
+FLEX_DIRECTION
+
+flexDirection:
+
+1.column
+2.row
+
+
+TIPS: 
+Add  <View style={{ flex: 1 }}> to the parent view for making the content Scrollable till the end 
+
+Touchable Opacity

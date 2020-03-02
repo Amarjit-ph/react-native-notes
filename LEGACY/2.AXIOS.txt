@@ -1,0 +1,31 @@
+
+
+## 1. AXIOS
+
+#1.Create get Request from axios and set to state
+
+axios.get('https://rallycoding.herokuapp.com/api/music_albums')
+            .then((res) => this.setState({ albums: res.data }))
+            .catch((error) => console.log(error));
+
+
+#2.Create Components and pass down the data from state as props
+
+renderAlbums() {
+return this.state.albums.map((album) => <AlbumDetail key={album.title} album={album} />)
+    }
+
+#3.Passing components as props from using children
+
+<CardSection>
+   <Text>{props.album.title}</Text>
+</CardSection>
+
+
+const CardSection = (props) => {
+    return (
+        <View style={styles.containerStyle}>
+            {props.children}
+        </View>
+    )
+};

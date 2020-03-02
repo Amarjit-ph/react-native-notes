@@ -1,0 +1,160 @@
+## 1.REACT NATIVE BASIC
+
+1.IMPORT A LIBARARY TO HELP CREATE A COMPONENT
+2.CREATE A COMPONENT
+3.RENDER IT TO THE DEVICE
+
+
+//IMPORT A LIBRARY TO HELP CREATE A COMPONENT
+
+import React from 'react';
+import { Text, AppRegistry } from 'react-native';
+
+// CREATE A COMPONENT
+
+const App = () => {
+    return (
+        <Text> HELLO ! REACT- NATIVE </Text>
+    )
+}
+
+// RENDER IT TO THE DEVICE
+AppRegistry.registerComponent('Albums', () => App);
+
+
+## 2.COMPONENTS
+
+[ SRC/HEADER.JS ]
+//IMPORT LIBRARIES FOR MAKING A COMPONENT
+import React from 'react';
+import { Text } from 'react-native';
+
+
+// CREATE COMPONENT 
+const Header = () => {
+    return <Text> ALBUMS </Text>
+};
+
+//MAKE COMPONENTS AVAILABLE TO OTHER PART OF APP
+export default Header;
+
+## 3. FUNCTIONAL COMPONENT
+
+-Used for presenting static Data
+-Can't handle Fetching Data
+-Easy to write
+
+
+const Header = () => {
+    return <Text> Hi ! There !</Text>
+}
+
+
+## 4. CLASS BASED COMPONENT
+
+-Used for Dynamic source of data
+-Handles any data that might change
+-Knows when it gets rendered to the devices
+-more code to write
+
+
+class Header extends Component{
+    render(){
+        return <Text> Hi There !</Text>
+    }
+}
+
+
+## 5. COMPONENTS WITH STYLES
+
+[ SRC/HEADER.JS ]
+//IMPORT LIBRARIES FOR MAKING A COMPONENT
+import React from 'react';
+import { Text, View } from 'react-native';
+
+
+// CREATE COMPONENT 
+const Header = () => {
+    const { textStyle, viewStyle } = styles;
+    return (
+        <View style={viewStyle}>
+            <Text style={textStyle}> ALBUMS </Text>
+        </ View>
+    );
+};
+
+const styles = {
+    textStyle: {
+        fontSize: 23,
+    },
+    viewStyle: {
+        backgroundColor: '#C0C0C0'
+    }
+};
+
+
+//MAKE COMPONENTS AVAILABLE TO OTHER PART OF APP
+export default Header;
+
+
+## 6. FLEX BOX
+
+VERTICAL ALIGNMENT:
+
+[justifyContent:]
+
+1.'flex-start'
+2.'center'
+3.'flex-end'
+
+HORIZONTAL ALIGNMENT:
+
+[alignItems:]
+
+1.'flex-end'
+2.'flex-start'
+3.'center'
+
+
+## 7. COMPONENTS WITH PROPS
+
+//IMPORT LIBRARIES FOR MAKING A COMPONENT
+import React from 'react';
+import { Text, View } from 'react-native';
+
+// CREATE COMPONENT
+const Header = (props) => {
+    const { textStyle, viewStyle } = styles;
+    return (
+        <View style={viewStyle}>
+            <Text style={textStyle}> {props.headerText}</Text>
+        </View>
+    );
+};
+
+const styles = {
+    textStyle: {
+        fontSize: 23
+    },
+    viewStyle: {
+        backgroundColor: "#C0C0C0",
+        justifyContent: "center",
+        alignItems: "center",
+        height: 60,
+        padding: 5,
+        shadowColor: "#000",
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.2,
+        elevation: 2,
+        postion: "relative"
+    }
+};
+
+//MAKE COMPONENTS AVAILABLE TO OTHER PART OF APP
+export default Header;
+
+<Header headerText={'AMARJIT PHEIROIJAM'} /> 
+
+
+
+
