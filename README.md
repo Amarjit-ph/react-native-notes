@@ -11,4 +11,5 @@ But the framework can build brilliant applications, and Facebook is working hard
 <br/>
 <br/>
 Personally, I have migrated my learning experience into Flutter<br/>
+Thank you for reading.
 Have a great day Folks!
